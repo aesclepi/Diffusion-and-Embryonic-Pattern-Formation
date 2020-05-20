@@ -5,7 +5,7 @@ The conclusion of the study is that the Bicoid chemical gradient is sufficient t
 At first approximation, this can be modeled as an initial value problem, wherein an initial concentration profile in x is assumed and numerical methods are used to find the first time derivative. 
 This simple model would be insufficient to show the effects of diffusion coefficeints or chemical lifetimes on the concentration profiles of large and small eggs. 
 In the script shared here, we have a working model where diffusion follows the governing equation: dc/dt = D*d^2c/dx^2 - c/tau + s . 
-Where C is a variable to represent chemical concentration in the x and time dimensions, tau is the chemical lifetime is seconds, and s is a constant source term
+Where C is a variable to represent chemical concentration in the x and time dimensions, tau is the chemical lifetime in seconds, and s is a constant source term.
 The starting parameters in the model are for the species Lucillia sericata. 
 Also, numpy.gradient is used to estimate the first and second spacial derivatives in x.
 The resulting concentration gradient can be projected unto a rectangularly shaped egg with length L to show that scaling is indeed possible across species by merely tuning the chemical lifetime, tau (luminescence term in script, lifetime of mol lum.).
